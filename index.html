@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj</title>
+    <script src="https://kit.fontawesome.com/84e2c363c5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <span id="btnReloj">reloj</span>
+        <span id="btnTemp">Temporizador</span>
+        <span id="btnCrono">Cronometro</span>
+      </nav>
+    </header>
+    <div class="reloj-container active" style="opacity: 1;">
+      <div class="number-container">
+        -:-
+      </div>
+      <div class="fecha">
+        - / - / -
+      </div>
+    </div>
+    <div class="crono-container">
+      <div class="number-container">
+        00
+      </div>
+      <div class="crono-start">
+        <i class="fas fa-play"></i>
+      </div>
+    </div>
+    <div class="temp-container">
+      <div class="cover">
+      </div>
+      <div class="modal-obterner__tiempo">
+        <div class="text-modal__container">
+          <h2>Agrega el tiempo</h2>
+        </div>
+        <div class="tiempo-inputs__container">
+          <div class="row">
+            <input id="hora" type="number" placeholder="00" value="0">
+            <label for="#hora">H</label>
+          </div>
+          <div class="row">
+            <input id="min" type="number" placeholder="00" value="0">
+            <label for="#min">M</label>
+          </div>
+          <div class="row">
+            <input id="seg" type="number" placeholder="00" value="0">
+            <label for="seg">S</label>
+          </div>
+        </div>
+        <button id="btnStart">Empezar</button>
+      </div>
+      <div class="number-container">
+        <div class="temp-hora">00</div>
+          <span class="letra-peque">h</span>
+          <div class="temp-min">00</div>
+          <span class="letra-peque">m</span>
+          <div class="temp-seg">00</div>
+          <span class="letra-peque">s</span>
+      </div>
+    </div>
+  </body>
+</html>
