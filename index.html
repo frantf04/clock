@@ -7,15 +7,20 @@
     <script src="https://kit.fontawesome.com/84e2c363c5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <script src="./index.js" defer></script>
+    <script src="./cronometro.js" defer></script>
+    <script src="./temporizador.js" defer></script>
   </head>
   <body>
     <header>
       <nav>
-        <span id="btnReloj">reloj</span>
         <span id="btnTemp">Temporizador</span>
+        <span id="btnReloj">reloj</span>
         <span id="btnCrono">Cronometro</span>
       </nav>
     </header>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                  reloj                                  -->
+    <!-- ----------------------------------------------------------------------- -->
     <div class="reloj-container active" style="opacity: 1;">
       <div class="number-container">
         -:-
@@ -24,18 +29,31 @@
         - / - / -
       </div>
     </div>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                               cronometro                                -->
+    <!-- ----------------------------------------------------------------------- -->
     <div class="crono-container">
       <div class="number-container">
         00
       </div>
-      <div class="crono-start">
-        <i class="fas fa-play"></i>
-      </div>
+        <div class="crono-control__container">
+          <div class="crono-start">
+            <i class="fas fa-play"></i>
+          </div>
+          <div class="crono-reset">
+            <i class="fas fa-redo"></i>
+          </div>
+        </div>
+   
     </div>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                              temporizador                               -->
+    <!-- ----------------------------------------------------------------------- -->
     <div class="temp-container">
-      <div class="cover">
+      <div class="cover active">
       </div>
-      <div class="modal-obterner__tiempo">
+      <!-- -------------------------------- modal -------------------------------- -->
+      <div class="modal-obtener__tiempo active">
         <div class="text-modal__container">
           <h2>Agrega el tiempo</h2>
         </div>
@@ -53,8 +71,10 @@
             <label for="seg">S</label>
           </div>
         </div>
+   
         <button id="btnStart">Empezar</button>
       </div>
+      <!-- ------------------------------ contador ------------------------------- -->
       <div class="number-container">
         <div class="temp-hora">00</div>
           <span class="letra-peque">h</span>
@@ -63,6 +83,14 @@
           <div class="temp-seg">00</div>
           <span class="letra-peque">s</span>
       </div>
+      <span class="temp-btn__container">
+        <button id="btn-temStop">
+          <i class="fas fa-pause"></i>
+        </button>
+        <button id="btn-plusTemp">
+          <i class="fas fa-plus-circle"></i>
+        </button>
+      </span>
     </div>
   </body>
 </html>
