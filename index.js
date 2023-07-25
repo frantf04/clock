@@ -18,12 +18,10 @@ const obtenerHoraActual = () => {
 
   reloj.children[0].innerHTML = `${h >= 10 ? h : "0" + h}: ${
     m >= 10 ? m : "0" + m
-  }: ${s >= 10 ? s : "0" + s}`;
+    }: ${s >= 10 ? s : "0" + s}`;
+  
   const dias = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  reloj.children[1].innerHTML = `${fecha
-    .toDateString()
-    .split("Fri")
-    .join(`${dias[fecha.getDay()]},`)}`;
+  reloj.children[1].innerHTML = `${fecha.toDateString().split(`${dias[fecha.getDay()]}`).join(`${dias[fecha.getDay()]},`)}`;
 };
 
 setInterval(() => {
